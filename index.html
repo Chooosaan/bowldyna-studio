@@ -1,51 +1,198 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Bowldyna Studio - 物理ベースのボウリングシミュレーター">
-  <title>Bowldyna Studio</title>
+  <meta name="description" content="Bowldyna Studio is a physics-based bowling simulator with strike-route search, oil-transition modeling, and 2D/3D pin physics.">
+  <meta name="theme-color" content="#061126">
+  <meta property="og:title" content="Bowldyna Studio">
+  <meta property="og:description" content="Turn feel into logic. Simulate ball motion, search strike routes, and study pin action.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/app-icon.png">
+  <title>Bowldyna Studio — Physics-Based Bowling Analysis</title>
   <link rel="icon" href="assets/app-icon.png">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header><div class="nav">
-  <a class="brand" href="./"><img src="assets/app-icon.png" alt=""><span>Bowldyna Studio</span></a>
-  <nav><a href="#features">機能</a><a href="support/">サポート</a><a href="privacy/">プライバシー</a><a href="#english">English</a></nav>
-</div></header>
+<header>
+  <div class="nav">
+    <a class="brand" href="./" aria-label="Bowldyna Studio home">
+      <img src="assets/app-icon.png" alt="Bowldyna Studio app icon">
+      <span>Bowldyna Studio</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#pro">Free &amp; Pro</a>
+      <a href="#japanese">日本語</a>
+      <a href="support/">Support</a>
+      <a href="privacy/">Privacy</a>
+    </nav>
+  </div>
+</header>
+
 <main>
   <section class="hero">
     <div>
       <div class="eyebrow">Physics-Based Bowling Simulator</div>
-      <h1>投球を、<br>感覚からロジックへ。</h1>
-      <p class="lead">ボール速度、回転、投球ライン、レーンコンディションを調整し、軌道・入射角・ピンアクションを物理シミュレーションで可視化します。</p>
-      <div class="actions"><a class="button primary" href="support/">サポートを見る</a><a class="button secondary" href="privacy/">プライバシーポリシー</a></div>
+      <h1>Turn feel<br>into logic.</h1>
+      <p class="lead">Explore how speed, rev rate, launch direction, ball specifications, lane oil, and pin physics shape a bowling shot—from release to pin action.</p>
+      <div class="actions">
+        <a class="button primary" href="#features">Explore features</a>
+        <a class="button secondary" href="support/">Support</a>
+      </div>
+      <div class="status-row" aria-label="Platform status">
+        <span class="status-pill">iOS</span>
+        <span class="status-pill">Android</span>
+        <span class="status-note">Release preparation and testing in progress</span>
+      </div>
     </div>
-    <img class="hero-icon" src="assets/app-icon.png" alt="Bowldyna Studio app icon">
+    <div class="hero-art">
+      <div class="hero-glow"></div>
+      <img class="hero-icon" src="assets/app-icon.png" alt="Bowldyna Studio app icon">
+      <div class="metric-chip chip-a"><strong>Entry angle</strong><span>Analyze pocket motion</span></div>
+      <div class="metric-chip chip-b"><strong>Strike route</strong><span>Search robust candidates</span></div>
+    </div>
+  </section>
+
+  <section class="section intro">
+    <div class="section-heading">
+      <div class="eyebrow">Why Bowldyna</div>
+      <h2>Not just where the ball went—why it went there.</h2>
+    </div>
+    <p class="section-lead">Bowldyna Studio combines release conditions, ball properties, lane oil, oil transition, and pin interaction in one simulator. It is built for bowlers who want to understand misses, compare adjustments, and find a more repeatable route to the pocket.</p>
   </section>
 
   <section id="features" class="section">
-    <h2>ボウリングの「なぜ」を可視化</h2>
-    <div class="grid">
-      <article class="card"><h3>軌道シミュレーション</h3><p>スキッド、フック、ロールの変化を連続的に表示し、投球条件による軌道の違いを比較します。</p></article>
-      <article class="card"><h3>物理パラメータ</h3><p>速度、回転数、Axis Rotation、Axis Tilt、ボール特性、オイル条件を調整できます。</p></article>
-      <article class="card"><h3>ピンアクション</h3><p>ボールとピン、ピン同士の衝突を再現し、ポケットへの入射とピンの動きを確認できます。</p></article>
+    <div class="section-heading">
+      <div class="eyebrow">Core capabilities</div>
+      <h2>From ball motion to pinfall</h2>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card featured">
+        <span class="feature-number">01</span>
+        <h3>Strike-route search</h3>
+        <p>Search combinations of speed, starting board, launch angle, rev rate, axis rotation, and axis tilt. Candidates are ranked with nearby-shot robustness testing rather than a single ideal line.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-number">02</span>
+        <h3>Continuous ball-motion model</h3>
+        <p>Visualize skid, hook, and roll as a continuous motion shaped by speed, rotation, coverstock, surface, RG, differential, PAP, layout, and oil conditions.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-number">03</span>
+        <h3>2D and Advanced 3D Beta pin physics</h3>
+        <p>Use fast 2D physics for everyday analysis or switch to the Advanced 3D Beta rigid-body model for detailed pin interaction. Displayed pinfall and scoring use the same mode-specific judgement.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-number">04</span>
+        <h3>Oil transition editing</h3>
+        <p>Model breakdown and carrydown with editable zones, width, intensity, distance, and fade. Compare how the same release changes as the lane develops.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-number">05</span>
+        <h3>Ball and lane libraries</h3>
+        <p>Save your own bowling balls and lane conditions, then load them directly into the simulator for faster comparison and repeatable testing.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-number">06</span>
+        <h3>Metrics and diagnostics</h3>
+        <p>Review breakpoint, pocket board, entry angle, oil-contact transitions, hit pins, fallen pins, remaining pins, and diagnostic information for each result.</p>
+      </article>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Free &amp; Bowldyna Pro</h2>
-    <p>基本的な軌道シミュレーションは無料で利用できます。Bowldyna Proは、詳細な回転軸、ボール仕様、オイル設定、ピン物理、残りピン編集、設定プロファイルなどを1回限りのアプリ内購入で解放します。</p>
-    <div class="notice">広告なし・サブスクリプションなし。Proは買い切りです。</div>
+  <section class="section mode-section">
+    <div class="section-heading">
+      <div class="eyebrow">Built for different levels</div>
+      <h2>Start simple. Go deep when you need to.</h2>
+    </div>
+    <div class="mode-grid">
+      <article class="mode-card">
+        <div class="mode-label">House Ball</div>
+        <h3>A simpler entry point</h3>
+        <p>Focus on speed, line, rotation, and basic lane conditions without having to enter every technical ball specification.</p>
+      </article>
+      <article class="mode-card pro-mode">
+        <div class="mode-label">My Ball</div>
+        <h3>Detailed technical control</h3>
+        <p>Configure coverstock, surface, RG, differential, core type, PAP, layout, axis rotation, axis tilt, and advanced lane behavior.</p>
+      </article>
+    </div>
   </section>
 
-  <section id="english" class="section lang-en" lang="en">
-    <div class="eyebrow">English</div>
-    <h2>Turn feel into logic.</h2>
-    <p class="lead">Bowldyna Studio is a physics-based bowling simulator that visualizes ball motion, entry angle, and pin action. Adjust release and lane conditions to explore why each shot behaves differently.</p>
-    <p>The core trajectory simulation is available for free. A one-time Bowldyna Pro purchase permanently unlocks advanced release settings, ball properties, oil controls, pin physics, pin setup editing, and saved profiles. No ads. No subscription.</p>
+  <section id="pro" class="section pricing-section">
+    <div class="section-heading">
+      <div class="eyebrow">Free &amp; Pro</div>
+      <h2>Core simulation for free. Advanced analysis with a one-time upgrade.</h2>
+    </div>
+    <div class="pricing-grid">
+      <article class="pricing-card">
+        <div class="plan-name">Free</div>
+        <h3>Explore the fundamentals</h3>
+        <ul class="check-list">
+          <li>Basic ball-trajectory simulation</li>
+          <li>House Ball and standard lane settings</li>
+          <li>Pin-action visualization</li>
+          <li>Core result metrics</li>
+        </ul>
+      </article>
+      <article class="pricing-card pro-card">
+        <div class="plan-name">Bowldyna Pro</div>
+        <h3>Unlock the full studio</h3>
+        <ul class="check-list">
+          <li>Strike-route search</li>
+          <li>Detailed ball, PAP, and layout controls</li>
+          <li>Custom, short, and long lane settings</li>
+          <li>Breakdown and carrydown editors</li>
+          <li>Advanced pin physics and 3D Beta</li>
+          <li>Ball and lane libraries</li>
+        </ul>
+        <div class="notice compact"><strong>One-time purchase.</strong> No subscription for Bowldyna Pro. No advertising in the current release.</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section language-section">
+    <div class="section-heading">
+      <div class="eyebrow">Worldwide</div>
+      <h2>Designed for bowlers across languages</h2>
+    </div>
+    <p>Bowldyna Studio includes English, Japanese, Simplified Chinese, Traditional Chinese, Korean, Spanish, Brazilian Portuguese, French, German, Italian, Thai, and Indonesian.</p>
+    <div class="language-cloud" aria-label="Supported languages">
+      <span>English</span><span>日本語</span><span>简体中文</span><span>繁體中文</span><span>한국어</span><span>Español</span><span>Português</span><span>Français</span><span>Deutsch</span><span>Italiano</span><span>ไทย</span><span>Bahasa Indonesia</span>
+    </div>
+  </section>
+
+  <section id="japanese" class="section lang-ja" lang="ja">
+    <div class="eyebrow">日本語</div>
+    <h2>投球を、感覚からロジックへ。</h2>
+    <p class="lead">Bowldyna Studioは、速度・回転・投球ライン・ボール特性・レーンオイル・ピン物理を組み合わせて、軌道とピンアクションを可視化する物理ベースのボウリングシミュレーターです。</p>
+    <div class="jp-grid">
+      <article><h3>ストライク軌道を逆算</h3><p>現在のボールとレーン条件から、速度・板目・角度・回転の候補を探索し、周辺誤差への強さも含めて評価します。</p></article>
+      <article><h3>2D／3D Betaピン物理</h3><p>高速な2Dと、詳細な3D剛体モデルを切り替えられます。各モードで、画面表示と残りピン判定が一致するよう設計されています。</p></article>
+      <article><h3>オイル変化まで検証</h3><p>ブレイクダウンとキャリーダウンを編集し、レーン変化によって同じ投球がどう変わるかを比較できます。</p></article>
+    </div>
+    <div class="notice">Bowldyna Proは買い切りです。現行版は広告なしです。実際の挙動はレーン状態や投球誤差によって変わるため、シミュレーション結果は分析・学習の参考としてご利用ください。</div>
+  </section>
+
+  <section class="section final-cta">
+    <div>
+      <div class="eyebrow">Bowldyna Studio</div>
+      <h2>Understand the shot. Build the next one.</h2>
+    </div>
+    <div class="actions">
+      <a class="button primary" href="support/">Get support</a>
+      <a class="button secondary" href="privacy/">Read privacy policy</a>
+    </div>
   </section>
 </main>
-<footer><div class="footer-inner"><span>© <span data-year></span> Chotaro Yamamoto</span><span><a href="support/">Support</a> · <a href="privacy/">Privacy</a></span></div></footer>
+
+<footer>
+  <div class="footer-inner">
+    <span>© <span data-year></span> Chotaro Yamamoto</span>
+    <span><a href="support/">Support</a> · <a href="privacy/">Privacy</a></span>
+  </div>
+</footer>
 <script src="assets/site.js"></script>
-</body></html>
+</body>
+</html>

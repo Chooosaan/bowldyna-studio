@@ -3,129 +3,113 @@
 
   # Bowldyna Studio
 
-  **投球を、感覚からロジックへ。**  
-  Physics-based bowling simulation, visualization, and analysis.
+  **Turn feel into logic.**  
+  Physics-based bowling simulation, strike-route search, and pin-action analysis.
 
-  [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-2ea44f?logo=github)](./)
-  [![Platform](https://img.shields.io/badge/Platform-iOS-black?logo=apple)](#)
-  [![Privacy](https://img.shields.io/badge/Privacy-No%20Tracking-2563eb)](privacy/)
-  [![Business Model](https://img.shields.io/badge/Model-Free%20%2B%20Pro-7c3aed)](#free--pro)
+  [![Platform](https://img.shields.io/badge/Platforms-iOS%20%7C%20Android-2563eb)](#platforms)
+  [![Privacy](https://img.shields.io/badge/Privacy-No%20tracking-0ea5e9)](privacy/)
+  [![Business Model](https://img.shields.io/badge/Model-Free%20%2B%20one--time%20Pro-7c3aed)](#free--pro)
 </div>
 
 ---
 
 ## About
 
-**Bowldyna Studio** is a physics-based bowling simulator designed to make ball motion easier to understand.
+Bowldyna Studio is a physics-based bowling simulator built to explain not only **where** a ball travels, but **why** it takes that shape.
 
-Adjust speed, rev rate, launch position, launch direction, axis rotation, axis tilt, ball properties, and lane conditions. Then visualize how those choices affect trajectory, entry angle, pocket position, and pin action.
+It combines release conditions, ball specifications, PAP and layout, lane oil, oil transition, and pin physics in one analysis environment.
 
-> Why did the ball miss the pocket?  
-> Why did the same target produce a different shape?  
-> How do rotation and oil conditions change the result?
+## Current features
 
-Bowldyna Studio turns those questions into motion, numbers, and logic.
-
-## Features
-
-- Animated ball trajectory simulation
-- Continuous skid, hook, and roll modeling
-- Ball speed and rev-rate controls
-- Axis Rotation and Axis Tilt settings
-- Oil-pattern visualization
-- Ball and lane-property configuration
-- Entry-angle and pocket analysis
-- Ball-to-pin and pin-to-pin collision simulation
-- Remaining-pin setup editing
-- Saved shot profiles
-- Japanese and English support
+- Continuous skid, hook, and roll simulation
+- Speed, starting board, launch direction, rev rate, Axis Rotation, and Axis Tilt
+- Coverstock, surface, RG, differential, core type, PAP, and layout controls
+- House, flat, short, long, and custom lane conditions
+- Breakdown and carrydown editing
+- Strike-route reverse search with nearby-shot robustness testing
+- Fast Legacy 2D pin physics
+- Advanced 3D Beta rigid-body pin physics
+- Mode-consistent pin display, pinfall, and remaining-pin scoring
+- Breakpoint, pocket board, entry angle, hit pins, fallen pins, and remaining pins
+- My Ball Library and Lane Library
+- House Ball and My Ball modes
+- 12 supported languages
 
 ## Free & Pro
 
 ### Free
 
-The free version includes the core experience:
-
-- Basic trajectory simulation
-- Speed and rev-rate adjustment
-- Launch position and direction
-- Ball-motion animation
-- Pin action and basic result analysis
+- Core trajectory simulation
+- Basic release controls
+- Standard lane conditions
+- Pin-action visualization
+- Core result metrics
 
 ### Bowldyna Pro
 
-A one-time in-app purchase permanently unlocks:
+A one-time in-app purchase unlocks advanced features such as:
 
-- Advanced release-axis controls
-- Detailed ball specifications
-- Full oil and lane settings
-- Advanced pin physics
-- Remaining-pin editing
-- Saved parameter profiles
+- Strike-route search
+- Detailed ball, PAP, and layout controls
+- Custom lane and oil-transition controls
+- Advanced pin physics and 3D Beta
+- Ball and lane libraries
 
-**No ads. No subscription.**
+**No subscription for Bowldyna Pro. No advertising in the current release.**
 
-## Public Pages
+## Platforms
+
+Bowldyna Studio is being prepared and tested for:
+
+- iPhone and iPad through the Apple App Store
+- Android through Google Play
+
+## Languages
+
+English, Japanese, Simplified Chinese, Traditional Chinese, Korean, Spanish, Brazilian Portuguese, French, German, Italian, Thai, and Indonesian.
+
+## Public pages
 
 | Page | Description |
 |---|---|
-| [Product page](./) | Bowldyna Studio overview |
-| [Support](support/) | Help, purchase restoration, and contact information |
-| [Privacy Policy](privacy/) | Data handling and privacy information |
+| [Product page](./) | Current Bowldyna Studio overview |
+| [Support](support/) | iOS and Android support and purchase restoration |
+| [Privacy Policy](privacy/) | Current data-handling policy |
 
 ## Privacy
 
-Bowldyna Studio is designed to work without accounts or tracking.
-
-- No advertising
+- No user account required
 - No behavioral tracking
-- No sale of personal data
-- Simulation settings are stored locally on the device
-- In-app purchases are processed by Apple
+- No advertising in the current release
+- Simulation settings and libraries are stored locally
+- Purchases are processed by Apple App Store or Google Play
 
 See the full [Privacy Policy](privacy/).
 
-## Technology
-
-The app is built with Flutter and uses a custom bowling-physics model for lane motion and pin interaction.
-
-This repository contains the static website used for:
-
-- App Store support URL
-- Privacy-policy URL
-- Product and marketing information
-
-## Local Preview
-
-You can open `index.html` directly, or serve the site locally:
+## Local preview
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open:
+Then open `http://localhost:8000`.
 
-```text
-http://localhost:8000
-```
+## GitHub Pages deployment
 
-## Deployment
-
-This site is ready for GitHub Pages.
-
-1. Open the repository **Settings**
+1. Open repository **Settings**
 2. Select **Pages**
 3. Choose **Deploy from a branch**
 4. Select `main` and `/(root)`
-5. Save and wait for deployment
+5. Save
 
 ## Disclaimer
 
-Simulation results are intended for analysis and learning. Real-world ball motion can vary with lane surface, oil transition, ball condition, release mechanics, and environmental factors.
+Simulation results are intended for analysis and learning. Real-world ball motion and pinfall can vary with lane surface, oil transition, ball condition, pin condition, release mechanics, and environmental factors.
 
 ---
 
 <div align="center">
   <strong>Bowldyna Studio</strong><br>
+  Turn feel into logic.<br>
   投球を、感覚からロジックへ。
 </div>
